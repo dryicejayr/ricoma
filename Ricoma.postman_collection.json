@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "1bf7186b-1fc3-49db-bd8c-68f6e417b9f8",
+		"name": "Ricoma",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Authentication",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user_name\" : \"johndoe\"\n\t,\"password\" : \"johndoe\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/authentication",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"authentication"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user_name\" : \"johndoe\"\n\t,\"password\" : \"johndoe\"\n\t,\"first_name\" : \"johndoe\"\n\t,\"last_name\" : \"johndoe\"\n\t,\"email\" : \"test@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Add Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoZW50aWNhdGlvbiIsImlhdCI6MTU4MzEyNzQ3MywiZXhwIjoxNTgzMTMxMDczLCJuYmYiOjE1ODMxMjc0NzMsImp0aSI6ImZkYjdXZVA3bmt1NlJlRTciLCJzdWIiOjEsInBydiI6ImVmOGJkMjU0MTk5YTRkZjgxMWJlNmM4ZGQ4M2U1MTViMWJlYzYzZGMifQ.3Bzxo-SmGxgnOBvfvoewvlw3HT9YfC6edhn59MBt2BA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"nike tshirt checked mark\"\n\t,\"description\" : \"a teacher optional field\"\n\t,\"brand_code\" : \"NI\"\n\t,\"variations\" : [\n\t\t{\n\t\t\t\"size_code\" : \"XL\"\n\t\t\t,\"color_code\" : \"BLK\"\n\t\t}\n\t\t,{\n\t\t\t\"size_code\" : \"L\"\n\t\t\t,\"color_code\" : \"BLU\"\n\t\t}\n\t\t,{\n\t\t\t\"size_code\" : \"S\"\n\t\t\t,\"color_code\" : \"RED\"\n\t\t}\n\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/product",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoZW50aWNhdGlvbiIsImlhdCI6MTU4MzEyNzQ3MywiZXhwIjoxNTgzMTMxMDczLCJuYmYiOjE1ODMxMjc0NzMsImp0aSI6ImZkYjdXZVA3bmt1NlJlRTciLCJzdWIiOjEsInBydiI6ImVmOGJkMjU0MTk5YTRkZjgxMWJlNmM4ZGQ4M2U1MTViMWJlYzYzZGMifQ.3Bzxo-SmGxgnOBvfvoewvlw3HT9YfC6edhn59MBt2BA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\" : 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/product",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoZW50aWNhdGlvbiIsImlhdCI6MTU4MzEyNzQ3MywiZXhwIjoxNTgzMTMxMDczLCJuYmYiOjE1ODMxMjc0NzMsImp0aSI6ImZkYjdXZVA3bmt1NlJlRTciLCJzdWIiOjEsInBydiI6ImVmOGJkMjU0MTk5YTRkZjgxMWJlNmM4ZGQ4M2U1MTViMWJlYzYzZGMifQ.3Bzxo-SmGxgnOBvfvoewvlw3HT9YfC6edhn59MBt2BA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/product/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoZW50aWNhdGlvbiIsImlhdCI6MTU4MzEyNzQ3MywiZXhwIjoxNTgzMTMxMDczLCJuYmYiOjE1ODMxMjc0NzMsImp0aSI6ImZkYjdXZVA3bmt1NlJlRTciLCJzdWIiOjEsInBydiI6ImVmOGJkMjU0MTk5YTRkZjgxMWJlNmM4ZGQ4M2U1MTViMWJlYzYzZGMifQ.3Bzxo-SmGxgnOBvfvoewvlw3HT9YfC6edhn59MBt2BA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
