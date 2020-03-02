@@ -4,7 +4,8 @@ application for BACKEND API Development to Test the API.
 before using the APIs, execute "php artisan serve" to run server.
 
 API Routes
------------------------------------------------
+
+
 "LOGIN TO GET AUTHENTICATION TOKEN"
 GET api/authentication
 PARAMS
@@ -12,7 +13,8 @@ PARAMS
     "user_name" : "johndoe"
     ,"password" : "johndoe"
 }
------------------------------------------------
+
+
 "CREATE USER"
 GET api/register
 PARAMS
@@ -23,7 +25,9 @@ PARAMS
 	,"last_name" : "johndoe"
 	,"email" : "test@gmail.com"
 }
------------------------------------------------
+
+
+
 "CREATE PRODUCTS AND VARIATIONS"
 POST api/products
 *AUTHENTICATION TOKEN REQUIRED
@@ -47,7 +51,9 @@ PARAMS
 		}
 	]
 }
-------------------------------------------
+
+
+
 "DELETE A PRODUCT"
 DELETE api/product
 *AUTHENTICATION TOKEN REQUIRED
@@ -55,11 +61,17 @@ PARAMS
 {
 	"id" : 1
 }
-----------------------------------------------
+
+
+
 "GET ANY PRODUCT BY ID"
 GET api/product/{PRODUCT_ID}
-----------------------------------------------
+
+
+
 "GET USER PRODUCTS"
 GET api/products
 *AUTHENTICATION TOKEN REQUIRED
-----------------------------------------------
+
+
+
