@@ -3,8 +3,8 @@ application for BACKEND API Development to Test the API.
 
 before using the APIs, execute "php artisan serve" to run server.
 
+```json
 API Routes
-
 
 "LOGIN TO GET AUTHENTICATION TOKEN"
 GET api/authentication
@@ -73,5 +73,5 @@ GET api/product/{PRODUCT_ID}
 GET api/products
 *AUTHENTICATION TOKEN REQUIRED
 
-
+```
 
